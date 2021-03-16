@@ -1492,7 +1492,7 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "pageLabel",
-                            "value": "<h4>Willkommen bei DevOps</h4>",
+                            "value": "<h4>Willkommen bei DevOpsPath</h4>",
                             "newRow": true
                         },
                         {
@@ -1500,6 +1500,15 @@ export class GuiModel {
                             "name": { default: "Studiengang" },
                             "icon": "fa-file-alt",
                             "color": "wet-asphalt",
+                            "page": "studyProgramPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Vorkenntnisse" },
+                            "icon": "book",
+                            "color": "pumpkin",
                             "page": "studyProgramPage",
                             "width": 2,
                             "newRow": true,
