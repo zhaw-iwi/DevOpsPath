@@ -166,41 +166,6 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "ModuleForm",
-                    "title": "Module",
-                    "formFieldList": [
-                        {
-                            "id":   "name",
-                            "type": "text",
-                            "name": "Name of Modul",
-                            "required": true,
-                            "width": 2
-                        },
-                        {
-                            "id": "description",
-                            "type": "text",
-                            "name": "Description",
-                            "newRow": true,
-                            "maxlenght": 4000,
-                            "height": 4,
-                            "width": 2
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-
-                    ]
-                },
-                {
                     "id": "PatientForm",
                     "title": "Patient",
                     "url": "/patient",
@@ -1548,15 +1513,6 @@ export class GuiModel {
                             "width": 2,
                             "newRow": true,
                         },
-                        {
-                            "type": "button",
-                            "name": { default: "Module" },
-                            "icon": "fa-th",
-                            "color": "pink",
-                            "page": "modulePage",
-                            "width": "2",
-                            "newRow": true,
-                        },
                     ]
                 },
                 {
@@ -1585,26 +1541,7 @@ export class GuiModel {
                             "form": {
                                 "form": "StudyProgramForm"
                             }
-                        },
-                    ]
-                },
-                {
-                    "id": "modulePage",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": { default: "Neues Modul" },
-                            "icon": "fa-th",
-                            "color": "purple",
-                            "width": 2,
-                            "form": {
-                                "form" : "ModuleForm"
-                            }
-                        },
-                        
+                        }
                     ]
                 },
                 {
