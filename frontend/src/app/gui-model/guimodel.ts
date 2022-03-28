@@ -1504,6 +1504,15 @@ export class GuiModel {
                             "width": 2,
                             "newRow": true,
                         },
+                        {
+                            "type": "button",
+                            "name": { default: "Patient" },
+                            "icon": "fa-bed",
+                            "color": "wet-asphalt",
+                            "page": "patientsPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
                     ]
                 },
                 {
