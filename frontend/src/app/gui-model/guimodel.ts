@@ -1483,6 +1483,48 @@ export class GuiModel {
                             "name": { default: "Weiter" }
                         }
                     ]
+                },
+                {
+                    "id": "socialMediaForm",
+                    "title": "SocialMedia",
+                    "url": "/socialMedia",
+                    "formFieldList": [
+                        {
+                            "id":   "name",
+                            "type": "text",
+                            "name": "Name",
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id":   "socialMediaLink",
+                            "type": "text",
+                            "name": "Social Media Link",
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": "Description",
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
                 }
             ],
             "pageList": [
@@ -1492,7 +1534,7 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "pageLabel",
-                            "value": "<h4>Willkommen bei DevOps</h4>",
+                            "value": "<h4>Willkommen bei DevOps - Gruppe L (Ahmad K., Silvan K., Corina W.)</h4>",
                             "newRow": true
                         },
                         {
@@ -1503,6 +1545,14 @@ export class GuiModel {
                             "page": "studyProgramPage",
                             "width": 2,
                             "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Social Media Kanäle" },
+                            "icon": "fa-file-alt",
+                            "color": "red",
+                            "page": "socialMediaPage",
+                            "width": 2,
                         },
                     ]
                 },
@@ -1531,6 +1581,35 @@ export class GuiModel {
                             "url": "/studyProgram",
                             "form": {
                                 "form": "StudyProgramForm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "socialMediaPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neues Social Media Kanal"},
+                            "icon": "fa-user",
+                            "color": "green",
+                            "width": 2,
+                            "form" : {
+                                "form" : "socialMediaForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "name": "SocialMedia",
+                            "icon": "fa-user",
+                            "color": "wet-asphalt",
+                            "search": true,
+                            "url": "/socialMedia",
+                            "form": {
+                                "form": "socialMediaForm"
                             }
                         }
                     ]
