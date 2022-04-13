@@ -34,4 +34,11 @@ public class RomanConverterTest {
         Assert.assertEquals("IV", abc.toRoman(4));
 
     }
+    @Test
+    public void convertertTest5() {
+
+        Test_Corina_v01 abc = new Test_Corina_v01();
+        Assert.assertEquals("V", abc.toRoman(5));
+
+    }
 }
