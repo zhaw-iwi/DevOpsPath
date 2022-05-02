@@ -14,14 +14,14 @@ public class RomanConverterTest {
         Assert.assertEquals("I", abc.toRoman(1));
 
     }
-    @Ignore
+    @Test
     public void convertertTest2() {
 
         Test_Corina_v01 abc = new Test_Corina_v01();
         Assert.assertEquals("II", abc.toRoman(2));
 
     }
-    @Ignore
+    @Test
     public void convertertTest3() {
 
         Test_Corina_v01 abc = new Test_Corina_v01();
@@ -39,7 +39,7 @@ public class RomanConverterTest {
     public void convertertTest5() {
 
         Test_Corina_v01 abc = new Test_Corina_v01();
-        Assert.assertEquals("X", abc.toRoman(5));
+        Assert.assertEquals("V", abc.toRoman(5));
 
     }
     @Test
