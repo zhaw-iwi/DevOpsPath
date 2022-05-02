@@ -39,7 +39,7 @@ public class RomanConverterTest {
     public void convertertTest5() {
 
         Test_Corina_v01 abc = new Test_Corina_v01();
-        Assert.assertEquals("V", abc.toRoman(5));
+        Assert.assertEquals("X", abc.toRoman(5));
 
     }
     @Test
