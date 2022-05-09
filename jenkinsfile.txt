@@ -1,31 +1,32 @@
 pipeline {
     agent any
+
     stages {
-        stage('Checkout') {
+        stage('Generate') {
             steps {
-                sh 'echo checkout'
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/zhaw-kabboahm/DevOpsPath']]])
-            }
-        }
+                checkout scm
+            } 
+        }    
         stage('Build backend') {
             steps {
                 echo 'Build backend'
                 sh "chmod +x gradlew"
-                sh "./gradlew build --stacktrace" //run gradle task
-                step( [ $class: 'JacocoPublisher'])
-            }
-        }
+                sh "./gradlew build --stacktrace" //run a gradle task
+                step( [ $class: 'JacocoPublisher' ] )
+                    }
+            }      
         stage('Unit and integration test') {
             steps {
-                echo 'Testing'
+                echo 'Testing..'
+                //junit '**/test-results/test/*.xml'
                 junit(
                     allowEmptyResults: true,
                     testResults: '**/test-reports/*.xml'
-                )
+                ) 
             }
         }
         stage('Build frontend') {
-            steps {
+            steps { 
                 echo 'Build frontend'
                 nodejs('NodeJS 14.6.0') {
                     sh 'npm install --prefix frontend'
