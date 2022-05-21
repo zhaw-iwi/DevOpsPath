@@ -12,10 +12,14 @@ pipeline {
             steps {
                 echo 'Build backend'
                 //sh 'gradle run --prefix backend'
-                sh './gradlew tasks'
+                dir('backend'){
+                sh "chmod +x gradlew" //permission
+                sh "./gradlew tasks"
+                //sh './gradlew run'
+                }
                 // sh "chmod +x gradlew"
-                // sh "./gradlew build --stacktrace" //run a gradle task
-                // step( [ $class: 'JacocoPublisher' ] )
+                //sh "./gradlew build --stacktrace" //run a gradle task
+                step( [ $class: 'JacocoPublisher' ] )
                     }
             }      
         stage('Unit and integration test') {
@@ -23,6 +27,8 @@ pipeline {
                 echo 'Testing..'
                 //junit '**/test-results/test/*.xml'
                 //testResults: '**/test-reports/*.xml'
+                // JUnit Results
+		        //junit '**/test-results/test/*.xml'
                 junit(
                     allowEmptyResults: true,
                     testResults: '**/test-results/test/*.xml'
