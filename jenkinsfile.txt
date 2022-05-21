@@ -18,7 +18,7 @@ pipeline {
                 //sh './gradlew run'
                 }
                 // sh "chmod +x gradlew"
-                //sh "./gradlew build --stacktrace" //run a gradle task
+                sh "./gradlew build --stacktrace" //run a gradle task
                 step( [ $class: 'JacocoPublisher' ] )
                     }
             }      
