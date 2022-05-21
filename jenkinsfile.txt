@@ -15,10 +15,11 @@ pipeline {
                 dir('backend'){
                 sh "chmod +x gradlew" //permission
                 sh "./gradlew tasks"
+                sh "./gradlew build --stacktrace" //run a gradle task
                 //sh './gradlew run'
                 }
                 // sh "chmod +x gradlew"
-                sh "./gradlew build --stacktrace" //run a gradle task
+                
                 step( [ $class: 'JacocoPublisher' ] )
                     }
             }      
