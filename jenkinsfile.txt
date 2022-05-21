@@ -11,10 +11,10 @@ pipeline {
         stage('Build backend') {
             steps {
                 echo 'Build backend'
-                sh 'gradle run --prefix backend'
-                // sh "chmod +x gradlew"
-                // sh "./gradlew build --stacktrace" //run a gradle task
-                // step( [ $class: 'JacocoPublisher' ] )
+                //sh 'gradle run --prefix backend'
+                sh "chmod +x gradlew"
+                sh "./gradlew build --stacktrace" //run a gradle task
+                step( [ $class: 'JacocoPublisher' ] )
                     }
             }      
         stage('Unit and integration test') {
