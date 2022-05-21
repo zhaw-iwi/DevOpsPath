@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    tools {nodejs "NodeJS 14.16.0"}
+    tools {nodejs "NodeJS 14.16.0"} //For npm 
 
     stages {
-        stage('Generate') {
+        stage('Get Source Code') {
             steps {
                 checkout scm
             } 
@@ -11,14 +11,11 @@ pipeline {
         stage('Build backend') {
             steps {
                 echo 'Build backend'
-                //sh 'gradle run --prefix backend'
-                dir('backend'){
+                dir('backend'){ //set directory
                 sh "chmod +x gradlew" //permission
                 sh "./gradlew tasks"
                 sh "./gradlew build --stacktrace" //run a gradle task
-                //sh './gradlew run'
                 }
-                // sh "chmod +x gradlew"
                 
                 step( [ $class: 'JacocoPublisher' ] )
                     }
@@ -26,10 +23,6 @@ pipeline {
         stage('Unit and integration test') {
             steps {
                 echo 'Testing..'
-                //junit '**/test-results/test/*.xml'
-                //testResults: '**/test-reports/*.xml'
-                // JUnit Results
-		        //junit '**/test-results/test/*.xml'
                 junit(
                     allowEmptyResults: true,
                     testResults: '**/test-results/test/*.xml'
@@ -39,10 +32,8 @@ pipeline {
         stage('Build frontend') {
             steps { 
                 echo 'Build frontend'
-                //nodejs('NodeJS 14.6.0') {
                     sh 'npm install --prefix frontend'
                     sh 'npm run build --prefix frontend'
-                //}
             }
         }
     }
