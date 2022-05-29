@@ -29,7 +29,7 @@ public abstract class AbstractCrudDatabaseServiceTest<E extends AbstractEntity, 
 	public void before() throws Exception {
 		service = (AbstractCrudDatabaseService<E, KEYTYPE>) getInjector().getInstance(getService());
 	}
-	/*
+	
 	@Test
 	public void testList() throws Exception {
 		List<E> entities = service.list();
@@ -87,5 +87,5 @@ public abstract class AbstractCrudDatabaseServiceTest<E extends AbstractEntity, 
 		find = service.read(key);
 		assertNull(find);
 	}
-	*/
+	
 }
