@@ -27,7 +27,6 @@ pipeline {
 				echo 'Build frontend',
 				sh 'npm install --prefix frontend',
 				sh 'npm run build --prefix frontend'
-			
 			}
 		}
 	}
