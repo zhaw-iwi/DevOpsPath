@@ -1504,6 +1504,24 @@ export class GuiModel {
                             "width": 2,
                             "newRow": true,
                         },
+                        {
+                            "type": "button",
+                            "name": { default: "Patient" },
+                            "icon": "fa-bed",
+                            "color": "wet-asphalt",
+                            "page": "patientsPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "User" },
+                            "icon": "fa-user",
+                            "color": "wet-asphalt",
+                            "page": "usersPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
                     ]
                 },
                 {
@@ -1883,7 +1901,7 @@ export class GuiModel {
                             "name": "NewUser",
                             "icon": "fa-user",
                             "color": "green",
-                            "width": 2,
+                            "width": 3,
                             "form" : {
                                 "form" : "UserForm"
                             }
