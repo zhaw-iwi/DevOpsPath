@@ -5,6 +5,17 @@
 DevOps Prototype
 * Understanding DevOps by doing it :-)
 
+Team Members
+- merkisam
+- hausejo1
+- schkev01
+
+Goals
+- Jenkins-Build von DevOpsPath um Frontend erweitern (NodeJS) 
+- Jenkins Pipelines verwenden können 
+- Pipelines in Git ablegen können 
+- Jenkins Cloud Agents verwenden können 
+
 ## Required Tools
 * Git (https://git-scm.com/)
 * Node and NPM (https://nodejs.org/)
@@ -20,7 +31,7 @@ npm run ng build
 ```
 Now all javascript files required for the frontend are built.
 
-## Deployment
+## Deployment 
 * Open a console/terminal window and change directory to backend:
 ```
 cd backend

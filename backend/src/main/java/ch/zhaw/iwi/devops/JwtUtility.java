@@ -21,6 +21,9 @@ public final class JwtUtility {
 	private static final Key key = MacProvider.generateKey();
 	private static final int expirationDuration = 1000 * 1800;
 
+	/** Add a private constructor to hide the implicit public one.  */
+	private JwtUtility() { }
+
 	public static String createJsonWebToken(String userId, String languageCode) {
 		Claims claims = Jwts.claims().setSubject(userId);
 		claims.put(LANGUAGE_CODE, languageCode);
