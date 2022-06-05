@@ -24,7 +24,7 @@ task stage {
 }
 
 test {
-    finalizedBy jacocoTestReport // report is always generated after tests run
+    finalizedBy jacocoTestReport // report is always generated after tests
 }
 
 jacocoTestReport {
