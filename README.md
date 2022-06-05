@@ -5,6 +5,17 @@
 DevOps Prototype
 * Understanding DevOps by doing it :-)
 
+Team Members
+- merkisam
+- hausejo1
+- schkev01
+
+Goals
+- Jenkins-Build von DevOpsPath um Frontend erweitern (NodeJS) 
+- Jenkins Pipelines verwenden können 
+- Pipelines in Git ablegen können 
+- Jenkins Cloud Agents verwenden können 
+
 ## Required Tools
 * Git (https://git-scm.com/)
 * Node and NPM (https://nodejs.org/)
