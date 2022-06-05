@@ -5,6 +5,11 @@
 DevOps Prototype
 * Understanding DevOps by doing it :-)
 
+contributors:
+- merkisam
+- johause1
+- schkev01
+
 ## Required Tools 
 * Git (https://git-scm.com/)
 * Node and NPM (https://nodejs.org/)
