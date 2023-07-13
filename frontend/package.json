@@ -29,7 +29,7 @@
   "dependencies": {
     "angular-plotly.js": "1.5.0",
     "path-framework": "0.6.2-beta.9",
-    "plotly.js": "1.52.2"
+    "plotly.js": "1.58.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.803.19",
@@ -42,14 +42,14 @@
     "codelyzer": "5.2.0",
     "jasmine-core": "3.5.0",
     "jasmine-spec-reporter": "4.2.1",
-    "karma": "4.4.1",
+    "karma": "6.4.2",
     "karma-chrome-launcher": "3.1.0",
     "karma-coverage-istanbul-reporter": "2.1.0",
     "karma-firefox-launcher": "1.2.0",
     "karma-jasmine": "2.0.1",
     "karma-jasmine-html-reporter": "1.4.2",
     "nodemon": "1.19.4",
-    "protractor": "6.0.0",
+    "protractor": "7.0.0",
     "ts-node": "8.5.2",
     "tslint": "5.20.1",
     "tslint-angular": "3.0.2",
